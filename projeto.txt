@@ -63,8 +63,7 @@ Register file
   * Um bloco com 16 registradores e sinais de controle para colocar
   a entrada em um registrador ou colocar um registrador nMa entrada do registrador A ou B
   * Tem na entrada a saida do MUX 2 WRITE-BACK
-  * Duas entradas de controle, uma para o CTRL0 (direto do bloco de controle) e uma para o CTRL3
-  (registrador de controle do write-back)
+  * Entradas de controle para a entrada de dados, saida de dados, e enable do write (pro NOP)
 
 INTERFACE ID/EX
 
