@@ -1,0 +1,343 @@
+# do CPU_run_msim_gate_verilog.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Modifying /home/pedro/altera/13.0sp1/modelsim_ase/modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+. {CPU.vo}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module registerfile
+# 
+# Top level modules:
+# 	registerfile
+# 
+# vlog -vlog01compat -work work +incdir+/home/pedro/odilon/mips/RegisterFile {/home/pedro/odilon/mips/RegisterFile/registerfile_TB.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module registerfile_TB
+# 
+# Top level modules:
+# 	registerfile_TB
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -L cycloneii_ver -L gate_work -L work -voptargs="+acc"  registerfile_TB
+# vsim +transport_int_delays +transport_path_delays -L cycloneii_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps registerfile_TB 
+# Loading work.registerfile_TB
+# Loading work.registerfile
+# Loading cycloneii_ver.cycloneii_io
+# Loading cycloneii_ver.cycloneii_mux21
+# Loading cycloneii_ver.cycloneii_dffe
+# Loading cycloneii_ver.cycloneii_asynch_io
+# Loading cycloneii_ver.cycloneii_clkctrl
+# Loading cycloneii_ver.cycloneii_mux41
+# Loading cycloneii_ver.cycloneii_ena_reg
+# Loading cycloneii_ver.cycloneii_ram_block
+# Loading cycloneii_ver.cycloneii_ram_register
+# Loading cycloneii_ver.cycloneii_ram_pulse_generator
+# Loading instances from CPU_v.sdo
+# Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
+# Loading timing data from CPU_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /registerfile_TB File: /home/pedro/odilon/mips/RegisterFile/registerfile_TB.v
+# 
+# add wave *
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: unknown  Hostname: pedro-HP-Pavilion-g4-Notebook-P  ProcessID: 29058
+#           Attempting to use alternate WLF file "./wlft2osMOH".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft2osMOH
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# 	DataIn 	EnableSave 	RegAAddr 	RegBAddr 	RegA 		RegB
+#          0 	0 	 0 	 0         0         0
+#          0 	0 	 0 	 0         0         0
+#          0 	1 	 0 	 0         0         0
+#         10 	1 	 0 	 0         0         0
+#         20 	1 	 0 	 0         0         0
+#         30 	1 	 0 	 0         0         0
+#         40 	1 	 0 	 0         0         0
+#         50 	1 	 0 	 0         0         0
+#         60 	1 	 0 	 0         0         0
+#         70 	1 	 0 	 0         0         0
+#         80 	1 	 0 	 0         0         0
+#         90 	1 	 0 	 0         0         0
+#        100 	1 	 0 	 0         0         0
+#        110 	1 	 0 	 0         0         0
+#        120 	1 	 0 	 0         0         0
+# ** Error: /home/pedro/altera/13.0sp1/modelsim_ase/linuxaloem/../altera/verilog/src/cycloneii_atoms.v(480): $hold( posedge clk &&& reset:1162911 ps, d:1163031 ps, 250 ps );
+#    Time: 1163031 ps  Iteration: 0  Instance: /registerfile_TB/RegisterFile/\registerBank_rtl_0|auto_generated|ram_block1a0 /datain_a_register
+#        130 	1 	 0 	 0         0         0
+#        140 	1 	 0 	 0         0         0
+#        150 	1 	 0 	 0         0         0
+# ** Error: /home/pedro/altera/13.0sp1/modelsim_ase/linuxaloem/../altera/verilog/src/cycloneii_atoms.v(480): $hold( posedge clk &&& reset:1402896 ps, d:1403053 ps, 250 ps );
+#    Time: 1403053 ps  Iteration: 0  Instance: /registerfile_TB/RegisterFile/\registerBank_rtl_1|auto_generated|ram_block1a0 /datain_a_register
+# ** Error: /home/pedro/altera/13.0sp1/modelsim_ase/linuxaloem/../altera/verilog/src/cycloneii_atoms.v(480): $hold( posedge clk &&& reset:1402911 ps, d:1403055 ps, 250 ps );
+#    Time: 1403055 ps  Iteration: 0  Instance: /registerfile_TB/RegisterFile/\registerBank_rtl_0|auto_generated|ram_block1a0 /datain_a_register
+#        999 	0 	 0 	 0         0         0
+#        999 	0 	 0 	 1         0         0
+#        999 	0 	 0 	 2         0        10
+#        999 	0 	 0 	 3         0        20
+#        999 	0 	 0 	 4         0        30
+#        999 	0 	 0 	 5         0        40
+#        999 	0 	 0 	 6         0        50
+#        999 	0 	 0 	 7         0        60
+#        999 	0 	 0 	 8         0        70
+#        999 	0 	 0 	 9         0        80
+#        999 	0 	 0 	10         0        90
+#        999 	0 	 0 	11         0       100
+#        999 	0 	 0 	12         0       110
+#        999 	0 	 0 	13         0       120
+#        999 	0 	 0 	14         0       130
+#        999 	0 	 0 	15         0       140
+#        999 	0 	 1 	 0         0       150
+#        999 	0 	 1 	 1        10         0
+#        999 	0 	 1 	 2        10        10
+#        999 	0 	 1 	 3        10        20
+#        999 	0 	 1 	 4        10        30
+#        999 	0 	 1 	 5        10        40
+#        999 	0 	 1 	 6        10        50
+#        999 	0 	 1 	 7        10        60
+#        999 	0 	 1 	 8        10        70
+#        999 	0 	 1 	 9        10        80
+#        999 	0 	 1 	10        10        90
+#        999 	0 	 1 	11        10       100
+#        999 	0 	 1 	12        10       110
+#        999 	0 	 1 	13        10       120
+#        999 	0 	 1 	14        10       130
+#        999 	0 	 1 	15        10       140
+#        999 	0 	 2 	 0        10       150
+#        999 	0 	 2 	 1        20         0
+#        999 	0 	 2 	 2        20        10
+#        999 	0 	 2 	 3        20        20
+#        999 	0 	 2 	 4        20        30
+#        999 	0 	 2 	 5        20        40
+#        999 	0 	 2 	 6        20        50
+#        999 	0 	 2 	 7        20        60
+#        999 	0 	 2 	 8        20        70
+#        999 	0 	 2 	 9        20        80
+#        999 	0 	 2 	10        20        90
+#        999 	0 	 2 	11        20       100
+#        999 	0 	 2 	12        20       110
+#        999 	0 	 2 	13        20       120
+#        999 	0 	 2 	14        20       130
+#        999 	0 	 2 	15        20       140
+#        999 	0 	 3 	 0        20       150
+#        999 	0 	 3 	 1        30         0
+#        999 	0 	 3 	 2        30        10
+#        999 	0 	 3 	 3        30        20
+#        999 	0 	 3 	 4        30        30
+#        999 	0 	 3 	 5        30        40
+#        999 	0 	 3 	 6        30        50
+#        999 	0 	 3 	 7        30        60
+#        999 	0 	 3 	 8        30        70
+#        999 	0 	 3 	 9        30        80
+#        999 	0 	 3 	10        30        90
+#        999 	0 	 3 	11        30       100
+#        999 	0 	 3 	12        30       110
+#        999 	0 	 3 	13        30       120
+#        999 	0 	 3 	14        30       130
+#        999 	0 	 3 	15        30       140
+#        999 	0 	 4 	 0        30       150
+#        999 	0 	 4 	 1        40         0
+#        999 	0 	 4 	 2        40        10
+#        999 	0 	 4 	 3        40        20
+#        999 	0 	 4 	 4        40        30
+#        999 	0 	 4 	 5        40        40
+#        999 	0 	 4 	 6        40        50
+#        999 	0 	 4 	 7        40        60
+#        999 	0 	 4 	 8        40        70
+#        999 	0 	 4 	 9        40        80
+#        999 	0 	 4 	10        40        90
+#        999 	0 	 4 	11        40       100
+#        999 	0 	 4 	12        40       110
+#        999 	0 	 4 	13        40       120
+#        999 	0 	 4 	14        40       130
+#        999 	0 	 4 	15        40       140
+#        999 	0 	 5 	 0        40       150
+#        999 	0 	 5 	 1        50         0
+#        999 	0 	 5 	 2        50        10
+#        999 	0 	 5 	 3        50        20
+#        999 	0 	 5 	 4        50        30
+#        999 	0 	 5 	 5        50        40
+#        999 	0 	 5 	 6        50        50
+#        999 	0 	 5 	 7        50        60
+#        999 	0 	 5 	 8        50        70
+#        999 	0 	 5 	 9        50        80
+#        999 	0 	 5 	10        50        90
+#        999 	0 	 5 	11        50       100
+#        999 	0 	 5 	12        50       110
+#        999 	0 	 5 	13        50       120
+#        999 	0 	 5 	14        50       130
+#        999 	0 	 5 	15        50       140
+#        999 	0 	 6 	 0        50       150
+#        999 	0 	 6 	 1        60         0
+#        999 	0 	 6 	 2        60        10
+#        999 	0 	 6 	 3        60        20
+#        999 	0 	 6 	 4        60        30
+#        999 	0 	 6 	 5        60        40
+#        999 	0 	 6 	 6        60        50
+#        999 	0 	 6 	 7        60        60
+#        999 	0 	 6 	 8        60        70
+#        999 	0 	 6 	 9        60        80
+#        999 	0 	 6 	10        60        90
+#        999 	0 	 6 	11        60       100
+#        999 	0 	 6 	12        60       110
+#        999 	0 	 6 	13        60       120
+#        999 	0 	 6 	14        60       130
+#        999 	0 	 6 	15        60       140
+#        999 	0 	 7 	 0        60       150
+#        999 	0 	 7 	 1        70         0
+#        999 	0 	 7 	 2        70        10
+#        999 	0 	 7 	 3        70        20
+#        999 	0 	 7 	 4        70        30
+#        999 	0 	 7 	 5        70        40
+#        999 	0 	 7 	 6        70        50
+#        999 	0 	 7 	 7        70        60
+#        999 	0 	 7 	 8        70        70
+#        999 	0 	 7 	 9        70        80
+#        999 	0 	 7 	10        70        90
+#        999 	0 	 7 	11        70       100
+#        999 	0 	 7 	12        70       110
+#        999 	0 	 7 	13        70       120
+#        999 	0 	 7 	14        70       130
+#        999 	0 	 7 	15        70       140
+#        999 	0 	 8 	 0        70       150
+#        999 	0 	 8 	 1        80         0
+#        999 	0 	 8 	 2        80        10
+#        999 	0 	 8 	 3        80        20
+#        999 	0 	 8 	 4        80        30
+#        999 	0 	 8 	 5        80        40
+#        999 	0 	 8 	 6        80        50
+#        999 	0 	 8 	 7        80        60
+#        999 	0 	 8 	 8        80        70
+#        999 	0 	 8 	 9        80        80
+#        999 	0 	 8 	10        80        90
+#        999 	0 	 8 	11        80       100
+#        999 	0 	 8 	12        80       110
+#        999 	0 	 8 	13        80       120
+#        999 	0 	 8 	14        80       130
+#        999 	0 	 8 	15        80       140
+#        999 	0 	 9 	 0        80       150
+#        999 	0 	 9 	 1        90         0
+#        999 	0 	 9 	 2        90        10
+#        999 	0 	 9 	 3        90        20
+#        999 	0 	 9 	 4        90        30
+#        999 	0 	 9 	 5        90        40
+#        999 	0 	 9 	 6        90        50
+#        999 	0 	 9 	 7        90        60
+#        999 	0 	 9 	 8        90        70
+#        999 	0 	 9 	 9        90        80
+#        999 	0 	 9 	10        90        90
+#        999 	0 	 9 	11        90       100
+#        999 	0 	 9 	12        90       110
+#        999 	0 	 9 	13        90       120
+#        999 	0 	 9 	14        90       130
+#        999 	0 	 9 	15        90       140
+#        999 	0 	10 	 0        90       150
+#        999 	0 	10 	 1       100         0
+#        999 	0 	10 	 2       100        10
+#        999 	0 	10 	 3       100        20
+#        999 	0 	10 	 4       100        30
+#        999 	0 	10 	 5       100        40
+#        999 	0 	10 	 6       100        50
+#        999 	0 	10 	 7       100        60
+#        999 	0 	10 	 8       100        70
+#        999 	0 	10 	 9       100        80
+#        999 	0 	10 	10       100        90
+#        999 	0 	10 	11       100       100
+#        999 	0 	10 	12       100       110
+#        999 	0 	10 	13       100       120
+#        999 	0 	10 	14       100       130
+#        999 	0 	10 	15       100       140
+#        999 	0 	11 	 0       100       150
+#        999 	0 	11 	 1       110         0
+#        999 	0 	11 	 2       110        10
+#        999 	0 	11 	 3       110        20
+#        999 	0 	11 	 4       110        30
+#        999 	0 	11 	 5       110        40
+#        999 	0 	11 	 6       110        50
+#        999 	0 	11 	 7       110        60
+#        999 	0 	11 	 8       110        70
+#        999 	0 	11 	 9       110        80
+#        999 	0 	11 	10       110        90
+#        999 	0 	11 	11       110       100
+#        999 	0 	11 	12       110       110
+#        999 	0 	11 	13       110       120
+#        999 	0 	11 	14       110       130
+#        999 	0 	11 	15       110       140
+#        999 	0 	12 	 0       110       150
+#        999 	0 	12 	 1       120         0
+#        999 	0 	12 	 2       120        10
+#        999 	0 	12 	 3       120        20
+#        999 	0 	12 	 4       120        30
+#        999 	0 	12 	 5       120        40
+#        999 	0 	12 	 6       120        50
+#        999 	0 	12 	 7       120        60
+#        999 	0 	12 	 8       120        70
+#        999 	0 	12 	 9       120        80
+#        999 	0 	12 	10       120        90
+#        999 	0 	12 	11       120       100
+#        999 	0 	12 	12       120       110
+#        999 	0 	12 	13       120       120
+#        999 	0 	12 	14       120       130
+#        999 	0 	12 	15       120       140
+#        999 	0 	13 	 0       120       150
+#        999 	0 	13 	 1       130         0
+#        999 	0 	13 	 2       130        10
+#        999 	0 	13 	 3       130        20
+#        999 	0 	13 	 4       130        30
+#        999 	0 	13 	 5       130        40
+#        999 	0 	13 	 6       130        50
+#        999 	0 	13 	 7       130        60
+#        999 	0 	13 	 8       130        70
+#        999 	0 	13 	 9       130        80
+#        999 	0 	13 	10       130        90
+#        999 	0 	13 	11       130       100
+#        999 	0 	13 	12       130       110
+#        999 	0 	13 	13       130       120
+#        999 	0 	13 	14       130       130
+#        999 	0 	13 	15       130       140
+#        999 	0 	14 	 0       130       150
+#        999 	0 	14 	 1       140         0
+#        999 	0 	14 	 2       140        10
+#        999 	0 	14 	 3       140        20
+#        999 	0 	14 	 4       140        30
+#        999 	0 	14 	 5       140        40
+#        999 	0 	14 	 6       140        50
+#        999 	0 	14 	 7       140        60
+#        999 	0 	14 	 8       140        70
+#        999 	0 	14 	 9       140        80
+#        999 	0 	14 	10       140        90
+#        999 	0 	14 	11       140       100
+#        999 	0 	14 	12       140       110
+#        999 	0 	14 	13       140       120
+#        999 	0 	14 	14       140       130
+#        999 	0 	14 	15       140       140
+#        999 	0 	15 	 0       140       150
+#        999 	0 	15 	 1       150         0
+#        999 	0 	15 	 2       150        10
+#        999 	0 	15 	 3       150        20
+#        999 	0 	15 	 4       150        30
+#        999 	0 	15 	 5       150        40
+#        999 	0 	15 	 6       150        50
+#        999 	0 	15 	 7       150        60
+#        999 	0 	15 	 8       150        70
+#        999 	0 	15 	 9       150        80
+#        999 	0 	15 	10       150        90
+#        999 	0 	15 	11       150       100
+#        999 	0 	15 	12       150       110
+#        999 	0 	15 	13       150       120
+#        999 	0 	15 	14       150       130
+#        999 	0 	15 	15       150       140
+#        999 	0 	15 	15       150       150
+# Break in Module registerfile_TB at /home/pedro/odilon/mips/RegisterFile/registerfile_TB.v line 61
+# Simulation Breakpoint: Break in Module registerfile_TB at /home/pedro/odilon/mips/RegisterFile/registerfile_TB.v line 61
+# MACRO ./CPU_run_msim_gate_verilog.do PAUSED at line 17

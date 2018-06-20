@@ -13,8 +13,9 @@ module registerfile(
 
 reg[31:0] registerBank[0:15];
 
-initial begin
-	integer i;
+reg [3:0] i;
+
+initial begin	
 	for(i = 0; i < 15; i = i + 1)
 		registerBank[i] = 0;
 end

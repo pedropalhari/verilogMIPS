@@ -6,3 +6,9 @@
 (evince:5312): Gtk-WARNING **: Theme parsing error: gtk.css:4715:19: Junk at end of value
 
 (evince:5312): Gtk-WARNING **: gtk_widget_size_allocate(): attempt to allocate widget with width -27 and height 17
+
+(evince:2348): Gtk-WARNING **: Theme parsing error: gtk.css:4691:30: Junk at end of value
+
+(evince:2348): Gtk-WARNING **: Theme parsing error: gtk.css:4706:30: Junk at end of value
+
+(evince:2348): Gtk-WARNING **: Theme parsing error: gtk.css:4715:19: Junk at end of value

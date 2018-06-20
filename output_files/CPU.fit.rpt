@@ -1,5 +1,5 @@
 Fitter report for CPU
-Wed Jun 20 11:50:43 2018
+Wed Jun 20 19:46:54 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -58,7 +58,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Wed Jun 20 11:50:43 2018           ;
+; Fitter Status                      ; Successful - Wed Jun 20 19:46:54 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; CPU                                             ;
 ; Top-level Entity Name              ; registerfile                                    ;
@@ -750,9 +750,9 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------+--------------+
 ; |registerfile                          ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 1024        ; 2    ; 0            ; 0       ; 0         ; 110  ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |registerfile                                                              ; work         ;
 ;    |altsyncram:registerBank_rtl_0|     ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 512         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |registerfile|altsyncram:registerBank_rtl_0                                ; work         ;
-;       |altsyncram_ifl1:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 512         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |registerfile|altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated ; work         ;
+;       |altsyncram_hfl1:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 512         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |registerfile|altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated ; work         ;
 ;    |altsyncram:registerBank_rtl_1|     ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 512         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |registerfile|altsyncram:registerBank_rtl_1                                ; work         ;
-;       |altsyncram_ifl1:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 512         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |registerfile|altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated ; work         ;
+;       |altsyncram_hfl1:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 512         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |registerfile|altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated ; work         ;
 +----------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -881,121 +881,121 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                                                              ; Pad To Core Index ; Setting ;
 +----------------------------------------------------------------------------------+-------------------+---------+
 ; enableSavingDataIn                                                               ;                   ;         ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 ; clk                                                                              ;                   ;         ;
 ; dataIn[0]                                                                        ;                   ;         ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
 ; dataInRegister[0]                                                                ;                   ;         ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
 ; dataInRegister[1]                                                                ;                   ;         ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
 ; dataInRegister[2]                                                                ;                   ;         ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
 ; dataInRegister[3]                                                                ;                   ;         ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 ; dataOutRegisterA[0]                                                              ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
 ; dataOutRegisterA[1]                                                              ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
 ; dataOutRegisterA[2]                                                              ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
 ; dataOutRegisterA[3]                                                              ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 ; dataIn[1]                                                                        ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 ; dataIn[2]                                                                        ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
 ; dataIn[3]                                                                        ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 ; dataIn[4]                                                                        ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 ; dataIn[5]                                                                        ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
 ; dataIn[6]                                                                        ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 ; dataIn[7]                                                                        ;                   ;         ;
 ; dataIn[8]                                                                        ;                   ;         ;
 ; dataIn[9]                                                                        ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 ; dataIn[10]                                                                       ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 ; dataIn[11]                                                                       ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 ; dataIn[12]                                                                       ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 ; dataIn[13]                                                                       ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 ; dataIn[14]                                                                       ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 ; dataIn[15]                                                                       ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 ; dataIn[16]                                                                       ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 ; dataIn[17]                                                                       ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
 ; dataIn[18]                                                                       ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 ; dataIn[19]                                                                       ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 ; dataIn[20]                                                                       ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
 ; dataIn[21]                                                                       ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 ; dataIn[22]                                                                       ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 ; dataIn[23]                                                                       ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
 ; dataIn[24]                                                                       ;                   ;         ;
 ; dataIn[25]                                                                       ;                   ;         ;
 ; dataIn[26]                                                                       ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 ; dataIn[27]                                                                       ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 ; dataIn[28]                                                                       ;                   ;         ;
 ; dataIn[29]                                                                       ;                   ;         ;
 ; dataIn[30]                                                                       ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 ; dataIn[31]                                                                       ;                   ;         ;
-;      - altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
+;      - altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
 ; dataOutRegisterB[0]                                                              ;                   ;         ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 ; dataOutRegisterB[1]                                                              ;                   ;         ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
 ; dataOutRegisterB[2]                                                              ;                   ;         ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
 ; dataOutRegisterB[3]                                                              ;                   ;         ;
-;      - altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+;      - altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 +----------------------------------------------------------------------------------+-------------------+---------+
 
 
@@ -1068,70 +1068,70 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; dataOutRegisterA[2]                                                        ; 1       ;
 ; dataOutRegisterA[1]                                                        ; 1       ;
 ; dataOutRegisterA[0]                                                        ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a9  ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a10 ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a11 ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a12 ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a13 ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a14 ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a15 ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a16 ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a17 ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a18 ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a19 ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a20 ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a21 ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a22 ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a23 ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a24 ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a25 ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a26 ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a27 ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a28 ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a29 ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a30 ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a31 ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a1  ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a2  ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a3  ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a4  ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a5  ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a6  ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a7  ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a8  ; 1       ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ram_block1a0  ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a9  ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a10 ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a11 ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a12 ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a13 ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a14 ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a15 ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a16 ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a17 ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a18 ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a19 ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a20 ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a21 ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a22 ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a23 ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a24 ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a25 ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a26 ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a27 ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a28 ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a29 ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a30 ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a31 ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a1  ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a2  ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a3  ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a4  ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a5  ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a6  ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a7  ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a8  ; 1       ;
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ram_block1a0  ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a9  ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a10 ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a11 ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a12 ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a13 ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a14 ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a15 ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a16 ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a17 ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a18 ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a19 ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a20 ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a21 ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a22 ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a23 ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a24 ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a25 ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a26 ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a27 ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a28 ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a29 ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a30 ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a31 ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a1  ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a2  ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a3  ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a4  ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a5  ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a6  ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a7  ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a8  ; 1       ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ram_block1a0  ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a9  ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a10 ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a11 ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a12 ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a13 ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a14 ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a15 ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a16 ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a17 ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a18 ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a19 ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a20 ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a21 ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a22 ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a23 ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a24 ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a25 ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a26 ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a27 ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a28 ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a29 ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a30 ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a31 ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a1  ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a2  ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a3  ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a4  ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a5  ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a6  ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a7  ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a8  ; 1       ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ram_block1a0  ; 1       ;
 +----------------------------------------------------------------------------+---------+
 
 
@@ -1140,8 +1140,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+-------------------------------------------+-------------+----------------------+-----------------+-----------------+
 ; Name                                                                    ; Type ; Mode             ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M4Ks ; MIF                                       ; Location    ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ;
 +-------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+-------------------------------------------+-------------+----------------------+-----------------+-----------------+
-; altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 41           ; 32           ; 41           ; 32           ; yes                    ; no                      ; yes                    ; no                      ; 1312 ; 16                          ; 32                          ; 16                          ; 32                          ; 512                 ; 1    ; db/CPU.ram0_registerfile_e17e90b4.hdl.mif ; M4K_X41_Y15 ; Old data             ; Don't care      ; Don't care      ;
-; altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 41           ; 32           ; 41           ; 32           ; yes                    ; no                      ; yes                    ; no                      ; 1312 ; 16                          ; 32                          ; 16                          ; 32                          ; 512                 ; 1    ; db/CPU.ram0_registerfile_e17e90b4.hdl.mif ; M4K_X41_Y8  ; Old data             ; Don't care      ; Don't care      ;
+; altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 16           ; 32           ; 16           ; 32           ; yes                    ; no                      ; yes                    ; no                      ; 512  ; 16                          ; 32                          ; 16                          ; 32                          ; 512                 ; 1    ; db/CPU.ram0_registerfile_e17e90b4.hdl.mif ; M4K_X41_Y15 ; Old data             ; Don't care      ; Don't care      ;
+; altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 16           ; 32           ; 16           ; 32           ; yes                    ; no                      ; yes                    ; no                      ; 512  ; 16                          ; 32                          ; 16                          ; 32                          ; 512                 ; 1    ; db/CPU.ram0_registerfile_e17e90b4.hdl.mif ; M4K_X41_Y8  ; Old data             ; Don't care      ; Don't care      ;
 +-------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+-------------------------------------------+-------------+----------------------+-----------------+-----------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -1352,7 +1352,7 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.26 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.25 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 64 output pins without output pin load capacitance assignment
     Info (306007): Pin "registerA[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1427,8 +1427,8 @@ Info (176045): Design uses memory blocks. Violating setup or hold times of memor
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file /home/pedro/odilon/mips/output_files/CPU.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 675 megabytes
-    Info: Processing ended: Wed Jun 20 11:50:43 2018
+    Info: Peak virtual memory: 677 megabytes
+    Info: Processing ended: Wed Jun 20 19:46:55 2018
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:07
 

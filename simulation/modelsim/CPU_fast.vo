@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
-// DATE "06/20/2018 11:50:58"
+// DATE "06/20/2018 19:47:08"
 
 // 
 // Device: Altera EP2C20F256C7 Package FBGA256
@@ -241,8 +241,8 @@ wire \registerBank_rtl_1|auto_generated|ram_block1a28 ;
 wire \registerBank_rtl_1|auto_generated|ram_block1a29 ;
 wire \registerBank_rtl_1|auto_generated|ram_block1a30 ;
 wire \registerBank_rtl_1|auto_generated|ram_block1a31 ;
-wire [3:0] \dataOutRegisterA~combout ;
 wire [3:0] \dataOutRegisterB~combout ;
+wire [3:0] \dataOutRegisterA~combout ;
 wire [3:0] \dataInRegister~combout ;
 wire [31:0] \dataIn~combout ;
 
@@ -1868,7 +1868,7 @@ defparam \registerBank_rtl_0|auto_generated|ram_block1a0 .data_interleave_offset
 defparam \registerBank_rtl_0|auto_generated|ram_block1a0 .data_interleave_width_in_bits = 1;
 defparam \registerBank_rtl_0|auto_generated|ram_block1a0 .init_file = "db/CPU.ram0_registerfile_e17e90b4.hdl.mif";
 defparam \registerBank_rtl_0|auto_generated|ram_block1a0 .init_file_layout = "port_a";
-defparam \registerBank_rtl_0|auto_generated|ram_block1a0 .logical_ram_name = "altsyncram:registerBank_rtl_0|altsyncram_ifl1:auto_generated|ALTSYNCRAM";
+defparam \registerBank_rtl_0|auto_generated|ram_block1a0 .logical_ram_name = "altsyncram:registerBank_rtl_0|altsyncram_hfl1:auto_generated|ALTSYNCRAM";
 defparam \registerBank_rtl_0|auto_generated|ram_block1a0 .mixed_port_feed_through_mode = "old";
 defparam \registerBank_rtl_0|auto_generated|ram_block1a0 .operation_mode = "dual_port";
 defparam \registerBank_rtl_0|auto_generated|ram_block1a0 .port_a_address_clear = "none";
@@ -1882,7 +1882,7 @@ defparam \registerBank_rtl_0|auto_generated|ram_block1a0 .port_a_data_width = 32
 defparam \registerBank_rtl_0|auto_generated|ram_block1a0 .port_a_first_address = 0;
 defparam \registerBank_rtl_0|auto_generated|ram_block1a0 .port_a_first_bit_number = 0;
 defparam \registerBank_rtl_0|auto_generated|ram_block1a0 .port_a_last_address = 15;
-defparam \registerBank_rtl_0|auto_generated|ram_block1a0 .port_a_logical_ram_depth = 41;
+defparam \registerBank_rtl_0|auto_generated|ram_block1a0 .port_a_logical_ram_depth = 16;
 defparam \registerBank_rtl_0|auto_generated|ram_block1a0 .port_a_logical_ram_width = 32;
 defparam \registerBank_rtl_0|auto_generated|ram_block1a0 .port_a_write_enable_clear = "none";
 defparam \registerBank_rtl_0|auto_generated|ram_block1a0 .port_b_address_clear = "none";
@@ -1896,7 +1896,7 @@ defparam \registerBank_rtl_0|auto_generated|ram_block1a0 .port_b_data_width = 32
 defparam \registerBank_rtl_0|auto_generated|ram_block1a0 .port_b_first_address = 0;
 defparam \registerBank_rtl_0|auto_generated|ram_block1a0 .port_b_first_bit_number = 0;
 defparam \registerBank_rtl_0|auto_generated|ram_block1a0 .port_b_last_address = 15;
-defparam \registerBank_rtl_0|auto_generated|ram_block1a0 .port_b_logical_ram_depth = 41;
+defparam \registerBank_rtl_0|auto_generated|ram_block1a0 .port_b_logical_ram_depth = 16;
 defparam \registerBank_rtl_0|auto_generated|ram_block1a0 .port_b_logical_ram_width = 32;
 defparam \registerBank_rtl_0|auto_generated|ram_block1a0 .port_b_read_enable_write_enable_clear = "none";
 defparam \registerBank_rtl_0|auto_generated|ram_block1a0 .port_b_read_enable_write_enable_clock = "clock0";
@@ -2077,7 +2077,7 @@ defparam \registerBank_rtl_1|auto_generated|ram_block1a0 .data_interleave_offset
 defparam \registerBank_rtl_1|auto_generated|ram_block1a0 .data_interleave_width_in_bits = 1;
 defparam \registerBank_rtl_1|auto_generated|ram_block1a0 .init_file = "db/CPU.ram0_registerfile_e17e90b4.hdl.mif";
 defparam \registerBank_rtl_1|auto_generated|ram_block1a0 .init_file_layout = "port_a";
-defparam \registerBank_rtl_1|auto_generated|ram_block1a0 .logical_ram_name = "altsyncram:registerBank_rtl_1|altsyncram_ifl1:auto_generated|ALTSYNCRAM";
+defparam \registerBank_rtl_1|auto_generated|ram_block1a0 .logical_ram_name = "altsyncram:registerBank_rtl_1|altsyncram_hfl1:auto_generated|ALTSYNCRAM";
 defparam \registerBank_rtl_1|auto_generated|ram_block1a0 .mixed_port_feed_through_mode = "old";
 defparam \registerBank_rtl_1|auto_generated|ram_block1a0 .operation_mode = "dual_port";
 defparam \registerBank_rtl_1|auto_generated|ram_block1a0 .port_a_address_clear = "none";
@@ -2091,7 +2091,7 @@ defparam \registerBank_rtl_1|auto_generated|ram_block1a0 .port_a_data_width = 32
 defparam \registerBank_rtl_1|auto_generated|ram_block1a0 .port_a_first_address = 0;
 defparam \registerBank_rtl_1|auto_generated|ram_block1a0 .port_a_first_bit_number = 0;
 defparam \registerBank_rtl_1|auto_generated|ram_block1a0 .port_a_last_address = 15;
-defparam \registerBank_rtl_1|auto_generated|ram_block1a0 .port_a_logical_ram_depth = 41;
+defparam \registerBank_rtl_1|auto_generated|ram_block1a0 .port_a_logical_ram_depth = 16;
 defparam \registerBank_rtl_1|auto_generated|ram_block1a0 .port_a_logical_ram_width = 32;
 defparam \registerBank_rtl_1|auto_generated|ram_block1a0 .port_a_write_enable_clear = "none";
 defparam \registerBank_rtl_1|auto_generated|ram_block1a0 .port_b_address_clear = "none";
@@ -2105,7 +2105,7 @@ defparam \registerBank_rtl_1|auto_generated|ram_block1a0 .port_b_data_width = 32
 defparam \registerBank_rtl_1|auto_generated|ram_block1a0 .port_b_first_address = 0;
 defparam \registerBank_rtl_1|auto_generated|ram_block1a0 .port_b_first_bit_number = 0;
 defparam \registerBank_rtl_1|auto_generated|ram_block1a0 .port_b_last_address = 15;
-defparam \registerBank_rtl_1|auto_generated|ram_block1a0 .port_b_logical_ram_depth = 41;
+defparam \registerBank_rtl_1|auto_generated|ram_block1a0 .port_b_logical_ram_depth = 16;
 defparam \registerBank_rtl_1|auto_generated|ram_block1a0 .port_b_logical_ram_width = 32;
 defparam \registerBank_rtl_1|auto_generated|ram_block1a0 .port_b_read_enable_write_enable_clear = "none";
 defparam \registerBank_rtl_1|auto_generated|ram_block1a0 .port_b_read_enable_write_enable_clock = "clock0";

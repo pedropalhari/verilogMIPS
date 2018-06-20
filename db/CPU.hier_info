@@ -1,7 +1,5 @@
 |registerfile
 clk => registerBank.we_a.CLK
-clk => registerBank.waddr_a[5].CLK
-clk => registerBank.waddr_a[4].CLK
 clk => registerBank.waddr_a[3].CLK
 clk => registerBank.waddr_a[2].CLK
 clk => registerBank.waddr_a[1].CLK

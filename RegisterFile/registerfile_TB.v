@@ -1,0 +1,69 @@
+`timescale 1ns/10ps
+module registerfile_TB();
+
+reg clk;
+reg[31:0] dataIn;
+reg[3:0] dataInRegister;
+reg enableSavingDataIn;
+reg[3:0] dataOutRegisterA;
+reg[3:0] dataOutRegisterB;
+wire [31:0] registerA;
+wire [31:0] registerB;
+
+registerfile RegisterFile(
+	clk,
+	dataIn,
+	dataInRegister,
+	enableSavingDataIn,
+	dataOutRegisterA,
+	dataOutRegisterB,
+	registerA,
+	registerB
+);
+
+initial begin
+	clk = 0;
+	dataIn = 0;
+	dataInRegister = 0;
+	enableSavingDataIn = 0;
+	dataOutRegisterA = 0;
+	dataOutRegisterB = 0;
+end
+
+always #40 clk = ~clk;
+
+integer i, j;
+
+initial begin
+	//Salva em todos os registradores
+	#40
+	for(i = 0; i < 16; i = i + 1) begin
+		#80
+		dataIn <= 10 * i;
+		dataInRegister <= i;
+		enableSavingDataIn <= 1;
+	end
+	
+	//Pega de todos os registradores com o dataIn tentando gravar em cima dos dados
+	for(i = 0; i < 16; i = i + 1) begin
+		for(j = 0; j < 16; j = j + 1)begin
+			#80
+			dataIn <= 999;
+			dataInRegister <= 15 - j;			
+			enableSavingDataIn <= 0;
+			
+			dataOutRegisterA <= i;
+			dataOutRegisterB <= j;
+		end
+	end
+	
+	#240
+	$stop;
+end
+
+initial $display("\tDataIn \tEnableSave \tRegAAddr \tRegBAddr \tRegA \t\tRegB");
+
+always @ (posedge clk) 
+ $display("%d \t%d \t%d \t%d", dataIn, enableSavingDataIn, dataOutRegisterA, dataOutRegisterB, registerA, registerB);
+
+endmodule
