@@ -1,0 +1,138 @@
+CPU
+
+INSTRUCTION FETCH
+
+Memória de Programa (ProgramMem)
+* Dado um address, coloca um valor interno na saida
+* Saida ligada no registrador INST
+
+PC (PC)
+* A cada clock, incrementa seu valor de 1
+* Conectado no address da memoria de programa
+
+INTERFACE IF/ID
+
+Registrador inst (Registrador 32)
+* A cada clock, pega a saida da memória de programa e salva internamente
+
+ISNTRUCTION DECODE
+
+Control
+* Switch case que decodifica a instrução
+* CADA INSTRUÇÃO QUE DEPENDE DA ANTERIOR DEVE SER PRECEDIDA DE 4 INSTRUÇÕES NOP SEGUIDAS PARA USAR 
+O REGISTER FILE MAIS ATUALIZADO (problema do pipeline que
+o Odilon falou (hurr durr a instrução é executada corretamente?))
+* Fazer os 4 Loads, 4 Nops, 2 somas, 4 nops, subtração
+* Se os primeiros 6 bits forem
+  10 (operações aritmeticas)
+    * Os próximos 5 bits são o registrador de destino
+    * Os próximos 5 são qual registrador do register file vai para o registrador A
+    * Os próximos 5 são qual registrador do register file vai para o registrador B
+    * Os próximos 5 são "10"
+    * Os próximos 6 são ou 32, 34, 36, 37 (Add, Subtract, And, Or)
+  
+  11 (load word)
+   * Os próximos 5 bits são o registrador de destino
+   * Os próximos 5 são o registrador de inicio
+   * Os próximos 16 são o offset do inicio
+
+  12 (store word)
+   * Os próximos 5 bits são o registrador que vai ser salvo na memória
+   * Os próximos 5 são o registrador de inicio
+   * Os próximos 16 são o offset do inicio
+  * A saida do control é um barramento de 32 bits
+  * Cada bit desse barramento será tratado internamente com os módulos cabíveis
+
+  BIT - 0 = (Extend) Enable/Disable
+  BIT - 1-4 = (Register File) Registrador do register file que vai para o A
+  BIT - 5-8 = (Register File) Registrador do register file que vai para o B
+  BIT - 9-12 = (Register File) Registrador do register file que vai ser escrito pela saida D do write-back 
+  BIT - 13 = (MUX 1 EXECUTE) Enable/Disable
+  BIT - 14-15 = (ALU) Soma, subtração, AND, Or
+  BIT - 16 = (Memória de Dados) READ/write
+  BIT - 17 = (MUX 2 WRITE-BACK) Enable/Disable
+  BIT 18-31 = 0x00
+
+
+Extend
+  * Registrador de 32 bits que pega uma entrada de 16 e concatena com 16 zeros
+  quando o sinal de controle for 1
+  (ex: 0xff -> 0x00ff);
+
+Register file
+  * Um bloco com 16 registradores e sinais de controle para colocar
+  a entrada em um registrador ou colocar um registrador nMa entrada do registrador A ou B
+  * Tem na entrada a saida do MUX 2 WRITE-BACK
+  * Duas entradas de controle, uma para o CTRL0 (direto do bloco de controle) e uma para o CTRL3
+  (registrador de controle do write-back)
+
+INTERFACE ID/EX
+
+Ctrl1
+  * Registrador 32 de controle 1
+
+imm
+ * Registrador de valor imediato que pega a saida do Extends
+
+A
+  * Registrador que pega a saida do register file A
+
+B0
+  * Registrador que pega a saida do register file B
+
+EXECUTE
+
+ALU 
+ * Pega as saida dor registrador A e a saida do MUX 1 EXECUTE e
+ executa a operação passada pelo Ctrl1
+
+ 00 - Soma
+ 01 - Subtração
+ 10 - AND
+ 11 - Or
+
+MUX 1 EXECUTE
+  * Pega a saida do registrador B e do registrador IMM e aciona com o sinal de controle
+  0 - B
+  1 - IMM
+
+INTERFACE EX/MEMORY
+
+D0
+  * Saida da ALU
+
+B1
+  * Saida do registrador B0
+
+Ctrl2 
+  * Saida do Ctrl1
+
+MEMORY
+
+Memória de Dados
+ * Entrada de endereço (addr) é a saida do registrador D
+ * Data in (Din) é a saida do registrador B
+ * Sinal de controle Bit 16 da saida do Ctrl2
+ 0 - Read
+ 1 - Write
+ * Data out (Dout) liga na entrada do registrador M
+
+INTERFACE EX/MEM
+
+D1
+  * Saida do registrador D0
+
+M 
+  * Saida da memória de Dados
+
+Ctrl3
+  * Saida do Ctrl2
+
+WRITE-BACK
+
+MUX 2 WRITE-BACK
+  * Pega a saida do registrador M e do registrador D1 e aciona com o sinal de controle
+  0 - D1
+  1 - M
+
+
