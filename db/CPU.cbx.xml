@@ -1,7 +1,5 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="CPU">
-		<CBX_INST_ENTRY INSTANCE_NAME="|registerfile|altsyncram:registerBank_rtl_0" CBX_FILE_NAME="altsyncram_hfl1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|registerfile|altsyncram:registerBank_rtl_1" CBX_FILE_NAME="altsyncram_hfl1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

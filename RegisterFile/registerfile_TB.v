@@ -2,6 +2,7 @@
 module registerfile_TB();
 
 reg clk;
+reg rst;
 reg[31:0] dataIn;
 reg[3:0] dataInRegister;
 reg enableSavingDataIn;
@@ -12,6 +13,7 @@ wire [31:0] registerB;
 
 registerfile RegisterFile(
 	clk,
+	rst,
 	dataIn,
 	dataInRegister,
 	enableSavingDataIn,
@@ -23,6 +25,7 @@ registerfile RegisterFile(
 
 initial begin
 	clk = 0;
+	rst = 0;
 	dataIn = 0;
 	dataInRegister = 0;
 	enableSavingDataIn = 0;
@@ -36,7 +39,7 @@ integer i, j;
 
 initial begin
 	//Salva em todos os registradores
-	#40
+	#440 rst = 1;
 	for(i = 0; i < 16; i = i + 1) begin
 		#80
 		dataIn <= 10 * i;
@@ -61,9 +64,9 @@ initial begin
 	$stop;
 end
 
-initial $display("\tDataIn \tEnableSave \tRegAAddr \tRegBAddr \tRegA \t\tRegB");
+initial $display("Reset \tDataIn \tEnableSave \tRegAAddr \tRegBAddr \tRegA \t\tRegB");
 
 always @ (posedge clk) 
- $display("%d \t%d \t%d \t%d", dataIn, enableSavingDataIn, dataOutRegisterA, dataOutRegisterB, registerA, registerB);
+ $display("%b \t%d \t\t%d \t\t%d \t\t%d",rst, dataIn, enableSavingDataIn, dataOutRegisterA, dataOutRegisterB, registerA, registerB);
 
 endmodule

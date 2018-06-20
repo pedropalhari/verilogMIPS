@@ -4,10 +4,10 @@ K3
 cModel Technology
 Z0 d/home/pedro/odilon/mips/simulation/modelsim
 vregisterfile
-Ie4YA`9UY:ma:o:>ef]2Fl2
-VdT0IVB?zFdoJTBQ[@c;SE2
+I;OXfIINik`KHAPTSoAUKQ3
+VLfm0zP<QP_;8WGhSmS2`:2
 Z1 d/home/pedro/odilon/mips/simulation/modelsim
-w1529534828
+w1529538622
 8CPU.vo
 FCPU.vo
 L0 31
@@ -16,20 +16,20 @@ r1
 31
 Z3 o-vlog01compat -work work -O0
 !i10b 1
-!s100 lX1`1BYzz:1Jbcg73`amk3
+!s100 N=>_C9X0<6`=l?bNMX08A1
 !s85 0
-!s108 1529537166.591529
+!s108 1529538838.118339
 !s107 CPU.vo|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|CPU.vo|
 !s101 -O0
 !s92 -vlog01compat -work work +incdir+. -O0
 vregisterfile_TB
 !i10b 1
-!s100 9W:7FI>M`QYkl`3k:2Q8R2
-In_J^SEMa>4^Eo^h]U1nUP3
+!s100 VzFoML[a>QDoU<@kdU<Em3
+IeaRBQolK:kSae78KHXVnb0
 VS0c0hIL4g7bAW9GQAOgjO3
 R1
-w1529537152
+w1529538826
 8/home/pedro/odilon/mips/RegisterFile/registerfile_TB.v
 F/home/pedro/odilon/mips/RegisterFile/registerfile_TB.v
 L0 2
@@ -37,7 +37,7 @@ R2
 r1
 !s85 0
 31
-!s108 1529537166.677814
+!s108 1529538838.427350
 !s107 /home/pedro/odilon/mips/RegisterFile/registerfile_TB.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/pedro/odilon/mips/RegisterFile|/home/pedro/odilon/mips/RegisterFile/registerfile_TB.v|
 !s101 -O0

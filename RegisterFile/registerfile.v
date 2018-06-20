@@ -1,5 +1,6 @@
 module registerfile(
 	input clk,
+	input rst,
 	input[31:0] dataIn,
 	input[3:0] dataInRegister,
 	input enableSavingDataIn,
@@ -15,18 +16,18 @@ reg[31:0] registerBank[0:15];
 
 reg [3:0] i;
 
-initial begin	
-	for(i = 0; i < 15; i = i + 1)
-		registerBank[i] = 0;
-end
-
 always @ (posedge clk) begin
-	if(enableSavingDataIn) begin
-		registerBank[dataInRegister] <= dataIn;
+	if(~rst)
+		for(i = 0; i < 15; i = i + 1)
+			registerBank[i] <= 0;
+	else begin
+		if(enableSavingDataIn) begin
+			registerBank[dataInRegister] <= dataIn;
+		end
+		
+		registerA <= registerBank[dataOutRegisterA];
+		registerB <= registerBank[dataOutRegisterB];
 	end
-	
-	registerA <= registerBank[dataOutRegisterA];
-	registerB <= registerBank[dataOutRegisterB];
 end
 
 endmodule

@@ -1,5 +1,5 @@
 Flow report for CPU
-Wed Jun 20 19:47:08 2018
+Wed Jun 20 20:50:23 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,20 +40,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Wed Jun 20 19:47:08 2018           ;
+; Flow Status                        ; Successful - Wed Jun 20 20:50:23 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; CPU                                             ;
 ; Top-level Entity Name              ; registerfile                                    ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C20F256C7                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 0 / 18,752 ( 0 % )                              ;
-;     Total combinational functions  ; 0 / 18,752 ( 0 % )                              ;
-;     Dedicated logic registers      ; 0 / 18,752 ( 0 % )                              ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 110 / 152 ( 72 % )                              ;
+; Total logic elements               ; 975 / 18,752 ( 5 % )                            ;
+;     Total combinational functions  ; 704 / 18,752 ( 4 % )                            ;
+;     Dedicated logic registers      ; 576 / 18,752 ( 3 % )                            ;
+; Total registers                    ; 576                                             ;
+; Total pins                         ; 111 / 152 ( 73 % )                              ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 1,024 / 239,616 ( < 1 % )                       ;
+; Total memory bits                  ; 0 / 239,616 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                  ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
 +------------------------------------+-------------------------------------------------+
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/20/2018 19:46:43 ;
+; Start date & time ; 06/20/2018 20:49:46 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; CPU                 ;
 +-------------------+---------------------+
@@ -75,15 +75,19 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+--------------+-----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name  ; Section Id      ;
 +--------------------------------------+---------------------------------------+---------------+--------------+-----------------+
-; COMPILER_SIGNATURE_ID                ; 0.152953480329285                     ; --            ; --           ; --              ;
+; COMPILER_SIGNATURE_ID                ; 0.152953858532256                     ; --            ; --           ; --              ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --           ; registerfile_TB ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --           ; mux_TB          ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; registerfile_TB                       ; --            ; --           ; eda_simulation  ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --            ; --           ; eda_simulation  ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)             ; <None>        ; --           ; --              ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --           ; eda_simulation  ;
 ; EDA_TEST_BENCH_FILE                  ; RegisterFile/registerfile_TB.v        ; --            ; --           ; registerfile_TB ;
+; EDA_TEST_BENCH_FILE                  ; MUX/mux_TB.v                          ; --            ; --           ; mux_TB          ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; registerfile_TB                       ; --            ; --           ; registerfile_TB ;
+; EDA_TEST_BENCH_MODULE_NAME           ; mux_TB                                ; --            ; --           ; mux_TB          ;
 ; EDA_TEST_BENCH_NAME                  ; registerfile_TB                       ; --            ; --           ; eda_simulation  ;
+; EDA_TEST_BENCH_NAME                  ; mux_TB                                ; --            ; --           ; eda_simulation  ;
 ; EDA_TIME_SCALE                       ; 1 ps                                  ; --            ; --           ; eda_simulation  ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --           ; --              ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --           ; --              ;
@@ -102,12 +106,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 597 MB              ; 00:00:02                           ;
-; Fitter                    ; 00:00:06     ; 1.0                     ; 677 MB              ; 00:00:06                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 553 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 495 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 788 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:12     ; --                      ; --                  ; 00:00:12                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 551 MB              ; 00:00:03                           ;
+; Fitter                    ; 00:00:15     ; 1.0                     ; 686 MB              ; 00:00:15                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 543 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 516 MB              ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 798 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:23     ; --                      ; --                  ; 00:00:23                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
