@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CPU
-Wed Jun 20 20:49:49 2018
+Wed Jun 20 21:10:17 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,9 +14,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  9. Elapsed Time Per Partition
+ 10. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +41,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jun 20 20:49:49 2018           ;
+; Analysis & Synthesis Status        ; Successful - Wed Jun 20 21:10:17 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; CPU                                             ;
-; Top-level Entity Name              ; registerfile                                    ;
+; Top-level Entity Name              ; reg32bits                                       ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 1,184                                           ;
-;     Total combinational functions  ; 704                                             ;
-;     Dedicated logic registers      ; 576                                             ;
-; Total registers                    ; 576                                             ;
-; Total pins                         ; 111                                             ;
+; Total logic elements               ; 32                                              ;
+;     Total combinational functions  ; 32                                              ;
+;     Dedicated logic registers      ; 32                                              ;
+; Total registers                    ; 32                                              ;
+; Total pins                         ; 66                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -65,7 +64,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C20F256C7       ;                    ;
-; Top-level entity name                                                      ; registerfile       ; CPU                ;
+; Top-level entity name                                                      ; reg32bits          ; CPU                ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -155,13 +154,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                      ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                        ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
-; RegisterFile/registerfile.v      ; yes             ; User Verilog HDL File  ; /home/pedro/odilon/mips/RegisterFile/registerfile.v ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                     ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                       ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
+; 32bitsRegister/reg32bits.v       ; yes             ; User Verilog HDL File  ; /home/pedro/odilon/mips/32bitsRegister/reg32bits.v ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -169,28 +168,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 1,184 ;
+; Estimated Total logic elements              ; 32    ;
 ;                                             ;       ;
-; Total combinational functions               ; 704   ;
+; Total combinational functions               ; 32    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 656   ;
-;     -- 3 input functions                    ; 16    ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
 ;     -- <=2 input functions                  ; 32    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 704   ;
+;     -- normal mode                          ; 32    ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 576   ;
-;     -- Dedicated logic registers            ; 576   ;
+; Total registers                             ; 32    ;
+;     -- Dedicated logic registers            ; 32    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 111   ;
+; I/O pins                                    ; 66    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 576   ;
-; Total fan-out                               ; 4528  ;
-; Average fan-out                             ; 3.26  ;
+; Maximum fan-out node                        ; rst   ;
+; Maximum fan-out                             ; 32    ;
+; Total fan-out                               ; 160   ;
+; Average fan-out                             ; 1.23  ;
 +---------------------------------------------+-------+
 
 
@@ -199,7 +198,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |registerfile              ; 704 (704)         ; 576 (576)    ; 0           ; 0            ; 0       ; 0         ; 111  ; 0            ; |registerfile       ; work         ;
+; |reg32bits                 ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 66   ; 0            ; |reg32bits          ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -209,39 +208,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 576   ;
+; Total registers                              ; 32    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 576   ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|registerBank[14][22] ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|registerBank[13][19] ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|registerBank[12][25] ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|registerBank[11][18] ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|registerBank[10][18] ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|registerBank[9][6]   ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|registerBank[8][8]   ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|registerBank[7][26]  ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|registerBank[6][31]  ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|registerBank[5][31]  ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|registerBank[4][1]   ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|registerBank[3][19]  ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|registerBank[2][22]  ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|registerBank[1][17]  ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|registerBank[0][22]  ;
-; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; Yes        ; |registerfile|registerA[21]~reg0   ;
-; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; Yes        ; |registerfile|registerB[14]~reg0   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
 
 
 +-------------------------------+
@@ -249,7 +223,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -259,9 +233,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Jun 20 20:49:45 2018
+    Info: Processing started: Wed Jun 20 21:10:15 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 0 design units, including 0 entities, in source file 32bitsRegister/reg32bits_TB.v
+Info (12021): Found 1 design units, including 1 entities, in source file 32bitsRegister/reg32bits.v
+    Info (12023): Found entity 1: reg32bits
 Info (12021): Found 1 design units, including 1 entities, in source file RegisterFile/registerfile_TB.v
     Info (12023): Found entity 1: registerfile_TB
 Info (12021): Found 1 design units, including 1 entities, in source file RegisterFile/registerfile.v
@@ -283,22 +260,19 @@ Info (12021): Found 0 design units, including 0 entities, in source file Control
 Info (12021): Found 0 design units, including 0 entities, in source file Control/control.v
 Info (12021): Found 0 design units, including 0 entities, in source file ALU/alu_TB.v
 Info (12021): Found 0 design units, including 0 entities, in source file ALU/alu.v
-Info (12021): Found 0 design units, including 0 entities, in source file 32bitsRegister/32bitsRegister_TB.v
-Info (12021): Found 0 design units, including 0 entities, in source file 32bitsRegister/32bitsRegister.v
 Info (12021): Found 1 design units, including 1 entities, in source file cpu.v
     Info (12023): Found entity 1: cpu
-Info (12127): Elaborating entity "registerfile" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at registerfile.v(21): truncated value with size 32 to match size of target (4)
+Info (12127): Elaborating entity "reg32bits" for the top level hierarchy
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1327 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 47 input pins
-    Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 1216 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
+Info (21057): Implemented 98 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 34 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 32 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 600 megabytes
-    Info: Processing ended: Wed Jun 20 20:49:49 2018
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Processing ended: Wed Jun 20 21:10:17 2018
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

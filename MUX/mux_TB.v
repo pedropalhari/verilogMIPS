@@ -1,4 +1,4 @@
-`timescale 1ps/10ps
+`timescale 1ns/10ps
 module mux_TB();
 
 reg[31:0] A;
@@ -32,8 +32,16 @@ initial begin
 end
 
 initial begin
-	$display("\tA \tB \tSel \tOUT");
-	$display("\t%d \t%d \t%d \t%d", A, B, selector, muxOut);
+	$display("\tA \t\tB \tSel \t\tOUT\n");
+	
+	#50
+	$display("%d \t%d \t%d \t%d\n", A, B, selector, muxOut);
+	
+	#50
+	$display("%d \t%d \t%d \t%d\n", A, B, selector, muxOut);
+	
+	#50
+	$display("%d \t%d \t%d \t%d\n", A, B, selector, muxOut);
 end
 
 endmodule
