@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CPU
-Thu Jun 21 11:56:52 2018
+Thu Jun 21 12:13:10 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,7 +14,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |pc
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
  10. Elapsed Time Per Partition
  11. Analysis & Synthesis Messages
 
@@ -42,16 +42,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 21 11:56:52 2018           ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 21 12:13:09 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; CPU                                             ;
-; Top-level Entity Name              ; pc                                              ;
+; Top-level Entity Name              ; registerfile                                    ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 10                                              ;
-;     Total combinational functions  ; 10                                              ;
-;     Dedicated logic registers      ; 10                                              ;
-; Total registers                    ; 10                                              ;
-; Total pins                         ; 12                                              ;
+; Total logic elements               ; 1,184                                           ;
+;     Total combinational functions  ; 704                                             ;
+;     Dedicated logic registers      ; 576                                             ;
+; Total registers                    ; 576                                             ;
+; Total pins                         ; 111                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -65,7 +65,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C20F256C7       ;                    ;
-; Top-level entity name                                                      ; pc                 ; CPU                ;
+; Top-level entity name                                                      ; registerfile       ; CPU                ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -155,13 +155,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                  ;
-+----------------------------------+-----------------+------------------------+---------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path    ; Library ;
-+----------------------------------+-----------------+------------------------+---------------------------------+---------+
-; PC/pc.v                          ; yes             ; User Verilog HDL File  ; /home/pedro/odilon/mips/PC/pc.v ;         ;
-+----------------------------------+-----------------+------------------------+---------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                      ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                        ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
+; RegisterFile/registerfile.v      ; yes             ; User Verilog HDL File  ; /home/pedro/odilon/mips/RegisterFile/registerfile.v ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -169,28 +169,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 10    ;
+; Estimated Total logic elements              ; 1,184 ;
 ;                                             ;       ;
-; Total combinational functions               ; 10    ;
+; Total combinational functions               ; 704   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 10    ;
+;     -- 4 input functions                    ; 656   ;
+;     -- 3 input functions                    ; 16    ;
+;     -- <=2 input functions                  ; 32    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 1     ;
-;     -- arithmetic mode                      ; 9     ;
+;     -- normal mode                          ; 704   ;
+;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 10    ;
-;     -- Dedicated logic registers            ; 10    ;
+; Total registers                             ; 576   ;
+;     -- Dedicated logic registers            ; 576   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 12    ;
+; I/O pins                                    ; 111   ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 10    ;
-; Total fan-out                               ; 59    ;
-; Average fan-out                             ; 1.84  ;
+; Maximum fan-out                             ; 576   ;
+; Total fan-out                               ; 4528  ;
+; Average fan-out                             ; 3.26  ;
 +---------------------------------------------+-------+
 
 
@@ -199,7 +199,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |pc                        ; 10 (10)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |pc                 ; work         ;
+; |registerfile              ; 704 (704)         ; 576 (576)    ; 0           ; 0            ; 0       ; 0         ; 111  ; 0            ; |registerfile       ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -209,24 +209,40 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 10    ;
-; Number of registers using Synchronous Clear  ; 10    ;
+; Total registers                              ; 576   ;
+; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 576   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |pc ;
-+----------------+-------+-------------------------------------------+
-; Parameter Name ; Value ; Type                                      ;
-+----------------+-------+-------------------------------------------+
-; DATA_ADRESS    ; 10    ; Signed Integer                            ;
-+----------------+-------+-------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|t7[6]             ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|t6[6]             ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|t5[15]            ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|t4[13]            ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|t3[25]            ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|t2[25]            ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|t1[11]            ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|t0[0]             ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|s7[26]            ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|s6[2]             ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|s5[16]            ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|s4[28]            ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|s3[2]             ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|s2[12]            ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|s1[8]             ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |registerfile|s0[18]            ;
+; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; Yes        ; |registerfile|registerA[5]~reg0 ;
+; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; Yes        ; |registerfile|registerB[2]~reg0 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 
 
 +-------------------------------+
@@ -234,7 +250,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -244,7 +260,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Jun 21 11:56:50 2018
+    Info: Processing started: Thu Jun 21 12:13:05 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file 32bitsRegister/reg32bits_TB.v
@@ -270,8 +286,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file Extend/
     Info (12023): Found entity 1: extend_TB
 Info (12021): Found 1 design units, including 1 entities, in source file Extend/extend.v
     Info (12023): Found entity 1: extend
-Info (12021): Found 0 design units, including 0 entities, in source file DataMemory/datamemory_TB.v
-Info (12021): Found 0 design units, including 0 entities, in source file DataMemory/datamemory.v
+Info (12021): Found 1 design units, including 1 entities, in source file DataMemory/datamemory_TB.v
+    Info (12023): Found entity 1: datamemory_TB
+Info (12021): Found 1 design units, including 1 entities, in source file DataMemory/datamemory.v
+    Info (12023): Found entity 1: datamemory
 Info (12021): Found 0 design units, including 0 entities, in source file Control/control_TB.v
 Info (12021): Found 0 design units, including 0 entities, in source file Control/control.v
 Info (12021): Found 1 design units, including 1 entities, in source file ALU/alu_TB.v
@@ -280,17 +298,17 @@ Info (12021): Found 1 design units, including 1 entities, in source file ALU/alu
     Info (12023): Found entity 1: alu
 Info (12021): Found 1 design units, including 1 entities, in source file cpu.v
     Info (12023): Found entity 1: cpu
-Info (12127): Elaborating entity "pc" for the top level hierarchy
+Info (12127): Elaborating entity "registerfile" for the top level hierarchy
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 22 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 10 output pins
-    Info (21061): Implemented 10 logic cells
+Info (21057): Implemented 1327 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 47 input pins
+    Info (21059): Implemented 64 output pins
+    Info (21061): Implemented 1216 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 603 megabytes
-    Info: Processing ended: Thu Jun 21 11:56:52 2018
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 604 megabytes
+    Info: Processing ended: Thu Jun 21 12:13:10 2018
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
 
 

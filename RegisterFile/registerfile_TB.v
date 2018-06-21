@@ -60,6 +60,21 @@ initial begin
 		end
 	end
 	
+	//Salva em um e le ao mesmo tempo 
+	#80
+	enableSavingDataIn <= 1;
+	dataIn <= 400;
+	dataInRegister <= 10;
+	dataOutRegisterA <= 5;
+	dataOutRegisterB <= 9;
+	
+	#80
+	enableSavingDataIn <= 0;
+	dataIn <= 400;
+	dataInRegister <= 10;
+	dataOutRegisterA <= 5;
+	dataOutRegisterB <= 10;
+	
 	#240
 	$stop;
 end
