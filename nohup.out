@@ -30,3 +30,9 @@
 (evince:3159): Gtk-WARNING **: Theme parsing error: gtk.css:4706:30: Junk at end of value
 
 (evince:3159): Gtk-WARNING **: Theme parsing error: gtk.css:4715:19: Junk at end of value
+
+(evince:10477): Gtk-WARNING **: Theme parsing error: gtk.css:4691:30: Junk at end of value
+
+(evince:10477): Gtk-WARNING **: Theme parsing error: gtk.css:4706:30: Junk at end of value
+
+(evince:10477): Gtk-WARNING **: Theme parsing error: gtk.css:4715:19: Junk at end of value

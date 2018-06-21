@@ -43,15 +43,16 @@ o Odilon falou (hurr durr a instrução é executada corretamente?))
   * A saida do control é um barramento de 32 bits
   * Cada bit desse barramento será tratado internamente com os módulos cabíveis
 
-  BIT - 0 = (Extend) Enable/Disable
-  BIT - 1-4 = (Register File) Registrador do register file que vai para o A
-  BIT - 5-8 = (Register File) Registrador do register file que vai para o B
-  BIT - 9-12 = (Register File) Registrador do register file que vai ser escrito pela saida D do write-back 
-  BIT - 13 = (MUX 1 EXECUTE) Enable/Disable
-  BIT - 14-15 = (ALU) Soma, subtração, AND, Or
+  //BIT - 0 = (Extend) Enable/Disable
+  BIT - 0-3 = (Register File) Registrador do register file que vai para o A
+  BIT - 4-7 = (Register File) Registrador do register file que vai para o B
+  BIT - 8-11 = (Register File) Registrador do register file que vai ser escrito pela saida D do write-back 
+  BIT - 12 = (MUX 1 EXECUTE) Enable/Disable
+  BIT - 13-15 = (ALU) Soma, subtração, AND, Or
   BIT - 16 = (Memória de Dados) READ/write
   BIT - 17 = (MUX 2 WRITE-BACK) Enable/Disable
-  BIT 18-31 = 0x00
+  BIT - 18 = (Register File) Enable/Disable write
+  BIT 19-31 = 0x00
 
 
 Extend

@@ -1,16 +1,16 @@
-Fitter Status : Successful - Thu Jun 21 12:13:28 2018
+Fitter Status : Successful - Thu Jun 21 16:24:57 2018
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : CPU
-Top-level Entity Name : registerfile
+Top-level Entity Name : cpu
 Family : Cyclone II
 Device : EP2C20F256C7
 Timing Models : Final
-Total logic elements : 949 / 18,752 ( 5 % )
-    Total combinational functions : 704 / 18,752 ( 4 % )
-    Dedicated logic registers : 576 / 18,752 ( 3 % )
-Total registers : 576
-Total pins : 111 / 152 ( 73 % )
+Total logic elements : 2,738 / 18,752 ( 15 % )
+    Total combinational functions : 2,366 / 18,752 ( 13 % )
+    Dedicated logic registers : 796 / 18,752 ( 4 % )
+Total registers : 796
+Total pins : 130 / 152 ( 86 % )
 Total virtual pins : 0
-Total memory bits : 0 / 239,616 ( 0 % )
-Embedded Multiplier 9-bit elements : 0 / 52 ( 0 % )
+Total memory bits : 40,448 / 239,616 ( 17 % )
+Embedded Multiplier 9-bit elements : 6 / 52 ( 12 % )
 Total PLLs : 0 / 4 ( 0 % )
