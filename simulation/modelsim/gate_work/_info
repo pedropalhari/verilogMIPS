@@ -3,11 +3,11 @@ K3
 13
 cModel Technology
 Z0 d/home/pedro/odilon/mips/simulation/modelsim
-vextend
-IDRd0EUNhh_1N9ZjI`ezEZ3
-Vm8RM]?30Leic][0:GU;JF3
+vpc
+IB4o;keK3z1?zzW@DW<GMD3
+V[c[T51<GEWoXaoN[M6;HT2
 Z1 d/home/pedro/odilon/mips/simulation/modelsim
-w1529541099
+w1529593034
 8CPU.vo
 FCPU.vo
 L0 31
@@ -16,31 +16,31 @@ r1
 31
 Z3 o-vlog01compat -work work -O0
 !i10b 1
-!s100 4KABi[ibPZINB:NfRB]KB3
+!s100 e_;fQiioBz<=jcmi839MB0
 !s85 0
-!s108 1529541693.318035
+!s108 1529593047.663671
 !s107 CPU.vo|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|CPU.vo|
 !s101 -O0
 !s92 -vlog01compat -work work +incdir+. -O0
-vextend_TB
+vpc_TB
 !i10b 1
-!s100 d6zle0=8AZ<ML5K[Df]2k0
-IV]DehOZ@V>o@`;lkTWb>l0
-VJK3@Fn86cE7[fiF=12jW01
+!s100 3HLLoDaO9<YZ1eiZ2U1?l3
+IfkThk:JgU@J17;eWOOz8l1
+VBl?gEo2BJE6Vzz<f=P<_g0
 R1
-w1529541671
-8/home/pedro/odilon/mips/Extend/extend_TB.v
-F/home/pedro/odilon/mips/Extend/extend_TB.v
-L0 2
+w1529592957
+8/home/pedro/odilon/mips/PC/pc_TB.v
+F/home/pedro/odilon/mips/PC/pc_TB.v
+L0 3
 R2
 r1
 !s85 0
 31
-!s108 1529541693.372184
-!s107 /home/pedro/odilon/mips/Extend/extend_TB.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/pedro/odilon/mips/Extend|/home/pedro/odilon/mips/Extend/extend_TB.v|
+!s108 1529593047.704168
+!s107 /home/pedro/odilon/mips/PC/pc_TB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/pedro/odilon/mips/PC|/home/pedro/odilon/mips/PC/pc_TB.v|
 !s101 -O0
 R3
-!s92 -vlog01compat -work work +incdir+/home/pedro/odilon/mips/Extend -O0
-nextend_@t@b
+!s92 -vlog01compat -work work +incdir+/home/pedro/odilon/mips/PC -O0
+npc_@t@b

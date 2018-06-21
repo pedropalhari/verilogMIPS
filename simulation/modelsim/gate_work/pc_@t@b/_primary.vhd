@@ -1,4 +1,4 @@
 library verilog;
 use verilog.vl_types.all;
-entity extend_TB is
-end extend_TB;
+entity pc_TB is
+end pc_TB;

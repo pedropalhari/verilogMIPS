@@ -8,22 +8,22 @@
 # 
 # vlog -vlog01compat -work work +incdir+. {CPU.vo}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module extend
+# -- Compiling module pc
 # 
 # Top level modules:
-# 	extend
+# 	pc
 # 
-# vlog -vlog01compat -work work +incdir+/home/pedro/odilon/mips/Extend {/home/pedro/odilon/mips/Extend/extend_TB.v}
+# vlog -vlog01compat -work work +incdir+/home/pedro/odilon/mips/PC {/home/pedro/odilon/mips/PC/pc_TB.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module extend_TB
+# -- Compiling module pc_TB
 # 
 # Top level modules:
-# 	extend_TB
+# 	pc_TB
 # 
-# vsim -t 1ps +transport_int_delays +transport_path_delays -L cycloneii_ver -L gate_work -L work -voptargs="+acc"  extend_TB
-# vsim +transport_int_delays +transport_path_delays -L cycloneii_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps extend_TB 
-# Loading work.extend_TB
-# Loading work.extend
+# vsim -t 1ps +transport_int_delays +transport_path_delays -L cycloneii_ver -L gate_work -L work -voptargs="+acc"  pc_TB
+# vsim +transport_int_delays +transport_path_delays -L cycloneii_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps pc_TB 
+# Loading work.pc_TB
+# Loading work.pc
 # Loading cycloneii_ver.cycloneii_io
 # Loading cycloneii_ver.cycloneii_mux21
 # Loading cycloneii_ver.cycloneii_dffe
@@ -33,24 +33,60 @@
 # Loading cycloneii_ver.cycloneii_ena_reg
 # Loading cycloneii_ver.cycloneii_lcell_comb
 # Loading cycloneii_ver.cycloneii_lcell_ff
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
 # Loading instances from CPU_v.sdo
 # Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
 # Loading timing data from CPU_v.sdo
 # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
-#    Time: 0 ps  Iteration: 0  Instance: /extend_TB File: /home/pedro/odilon/mips/Extend/extend_TB.v
+#    Time: 0 ps  Iteration: 0  Instance: /pc_TB File: /home/pedro/odilon/mips/PC/pc_TB.v
 # 
 # add wave *
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: unknown  Hostname: pedro-HP-Pavilion-g4-Notebook-P  ProcessID: 4070
+#           Attempting to use alternate WLF file "./wlft4sy4bM".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft4sy4bM
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# DataIn 		Reset 			DataOut
-# 1000000000000000 	0 		00000000000000000000000000000000
-# 1000000000000000 	0 		00000000000000000000000000000000
-# 1000000000000000 	0 		00000000000000000000000000000000
-# 1000000000000000 	1 		00000000000000000000000000000000
-# 1000000000000000 	1 		00000000000000001000000000000000
-# Break in Module extend_TB at /home/pedro/odilon/mips/Extend/extend_TB.v line 22
-# Simulation Breakpoint: Break in Module extend_TB at /home/pedro/odilon/mips/Extend/extend_TB.v line 22
+# PC
+#    0
+#    0
+#    1
+#    2
+#    3
+#    4
+#    0
+#    1
+#    2
+#    3
+#    4
+#    5
+#    6
+#    7
+#    8
+#    9
+#   10
+#   11
+#   12
+#   13
+#   14
+#   15
+#   16
+#   17
+#   18
+#   19
+#   20
+#   21
+#   22
+#   23
+# Break in Module pc_TB at /home/pedro/odilon/mips/PC/pc_TB.v line 39
+# Simulation Breakpoint: Break in Module pc_TB at /home/pedro/odilon/mips/PC/pc_TB.v line 39
 # MACRO ./CPU_run_msim_gate_verilog.do PAUSED at line 17
